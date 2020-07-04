@@ -78,6 +78,8 @@ Puede ver el ejemplo completo en el [repo](https://github.com/gcmurillo/ajax_tut
 jQuery es una libreria de Javascript que permite manipular facilmente los documentos HTML y permite un uso mucho mas sencillo de Ajax.
 En este tutorial no profundizaremos en todos los aspectos de jQuery, sino solamente en el uso de Ajax.
 
+jQuery tiene implementadoas muchas funciones en las que usa internamente Ajax. Para el siguiente ejemplo usaremos la funcion `$.getJSON()` para importar datos desde un archivo JSON usando requerimiento `GET HTTP` al servidor.
+
 
 
 ## Referencias
