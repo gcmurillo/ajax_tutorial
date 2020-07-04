@@ -73,3 +73,9 @@ function muestraContenido() {
 La funcion `muestraContenido()` comprueba que se ha recibido la respuesta del servidor (`readyState`), si esta ha sido recibida, comprueba que sea correcta y valida (`status == 200`). Si todo es correcto, se muestra el contenido en un *alert* (`responseText`).
 
 Puede ver el ejemplo completo en el [repo](https://github.com/gcmurillo/ajax_tutorial/blob/master/code/index.html) 
+
+
+## Referencias
+
+* [MDN](https://developer.mozilla.org/es/docs/Web/Guide/AJAX)
+* [Uniwebsidad: Introduccion a AJAX](https://uniwebsidad.com/libros/ajax)
