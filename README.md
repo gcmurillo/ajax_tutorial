@@ -80,7 +80,7 @@ En este tutorial no profundizaremos en todos los aspectos de jQuery, sino solame
 
 jQuery tiene implementadoas muchas funciones en las que usa internamente Ajax. Para el siguiente ejemplo usaremos la función `$.getJSON()` para importar datos desde un archivo JSON usando requerimiento `GET HTTP` al servidor.
 
-![cap1](https://github.com/gcmurillo/ajax_tutorial/blob/master/capturas/cap1.JPG)
+![cap1](https://github.com/gcmurillo/ajax_tutorial/blob/master/capturas/cap1.jpg)
 
 En la captura se presenta la pantalla sin datos todavía. 
 
