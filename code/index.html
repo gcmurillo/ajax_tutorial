@@ -18,7 +18,7 @@
             peticion_http.onreadystatechange = muestraContenido;
 
             // Realizar peticion HTTP
-            peticion_http.open('GET', 'http://localhost/holamundo.txt', true);
+            peticion_http.open('GET', 'https://raw.githubusercontent.com/gcmurillo/ajax_tutorial/master/code/holamundo.txt', true);
             peticion_http.send(null);
 
             function muestraContenido() {

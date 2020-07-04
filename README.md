@@ -19,4 +19,12 @@ Dichas tecnologías son:
 
 En dicho artículo también presenta la diferencia entre el modelo tradicional y el basado en Ajax.
 
-!['models']('./capturas/f0102.gif')
+![models](https://github.com/gcmurillo/ajax_tutorial/blob/master/capturas/f0102.gif)
+
+En el modelo tradicional, aunque las aplicaciones funcionan correctamente, no crean una buena experiencia de usuario, debido a que si este realiza varias peticiones al servidor, debe de esperar a que se recargue la página según la cantidad de cambios solicitados. Ajax permite mejorar considerablemente la experiencia evitando recargas constantes de la página, ya que el intercambio de información se produce en segundo plano.
+
+## Un ejemplo sencillo - *Hola al mundo de Ajax*
+
+En este ejemplo sencillo, se descarga un archivo del servidor y se muestra el contenido sin necesidad de recargar la página.
+
+
