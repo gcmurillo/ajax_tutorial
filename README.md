@@ -58,7 +58,7 @@ peticion_http.open('GET', 'https://raw.githubusercontent.com/gcmurillo/ajax_tuto
 peticion_http.send(null);
 ```
 
-La peticion realizada es de tipo `GET` que no envia ningun parametro al servidor. La peticion se crea mediante el metido `open()`, en el que incluye el tipo de peticion (`GET`), la URL solicitada (*'https://raw.githubusercontent.com/gcmurillo/ajax_tutorial/mastcode/holamundo.txt'*) y un tercer parametro que vale `true`. Una vez creada la peticion HTTP, se envia al servidor mediante el metodo `send()`.
+La petición realizada es de tipo `GET` que no envía ningún parámetro al servidor. La petición se crea mediante el metido `open()`, en el que incluye el tipo de petición (`GET`), la URL solicitada (*'https://raw.githubusercontent.com/gcmurillo/ajax_tutorial/mastcode/holamundo.txt'*) y un tercer parámetro que vale `true`. Una vez creada la petición HTTP, se envía al servidor mediante el método `send()`.
 
 
 ``` Javascript
@@ -70,19 +70,48 @@ function muestraContenido() {
     }
 }
 ```
-La funcion `muestraContenido()` comprueba que se ha recibido la respuesta del servidor (`readyState`), si esta ha sido recibida, comprueba que sea correcta y valida (`status == 200`). Si todo es correcto, se muestra el contenido en un *alert* (`responseText`).
+La función `muestraContenido()` comprueba que se ha recibido la respuesta del servidor (`readyState`), si esta ha sido recibida, comprueba que sea correcta y válida (`status == 200`). Si todo es correcto, se muestra el contenido en un *alert* (`responseText`).
 
 Puede ver el ejemplo completo en el [repo](https://github.com/gcmurillo/ajax_tutorial/blob/master/code/index.html) 
 
 ## jQuery y Ajax
-jQuery es una libreria de Javascript que permite manipular facilmente los documentos HTML y permite un uso mucho mas sencillo de Ajax.
+jQuery es una librería de Javascript que permite manipular fácilmente los documentos HTML y permite un uso mucho más sencillo de Ajax.
 En este tutorial no profundizaremos en todos los aspectos de jQuery, sino solamente en el uso de Ajax.
 
-jQuery tiene implementadoas muchas funciones en las que usa internamente Ajax. Para el siguiente ejemplo usaremos la funcion `$.getJSON()` para importar datos desde un archivo JSON usando requerimiento `GET HTTP` al servidor.
+jQuery tiene implementadoas muchas funciones en las que usa internamente Ajax. Para el siguiente ejemplo usaremos la función `$.getJSON()` para importar datos desde un archivo JSON usando requerimiento `GET HTTP` al servidor.
 
+![cap1](https://github.com/gcmurillo/ajax_tutorial/blob/master/capturas/cap1.JPG)
+
+En la captura se presenta la pantalla sin datos todavía. 
+
+``` Javascript
+$("button").click(function () {
+    $.getJSON({
+        url: "https://raw.githubusercontent.com/gcmurillo/ajax_tutorial/master/code/data.json",
+        success: function (result) {
+            console.log(result)
+            $.each(result,function(i,j){
+                content ='<li>'+j+'</li>';
+                $('#list').append(content);
+            });
+        }
+    });
+});
+```
+Al hacer click en el botón, se ejecutará la función `$.getJSON` que toma los siguientes parámetros:
+* *url*: Requerido. Especifica el URL al que se realizará el requerimiento.
+* *data*: Opcional. Especifica datos que serán enviados al servidor.
+* *success*: Opcional. Especifica la función que se ejecutará cuando el requerimiento sea exitoso.
+
+![cap2](https://github.com/gcmurillo/ajax_tutorial/blob/master/capturas/cap2.JPG)
+
+## Conclusiones
+Ajax nos permite mejorar la experiencia de usuario en cuanto a la interacción con datos. Aunque en este tutorial solo se presentaron ejemplos usando requerimientos `GET`, se pueden realizar también requerimientos tipo `POST`, `DELETE`, `PUT` de acuerdo al caso. 
 
 
 ## Referencias
 
 * [MDN](https://developer.mozilla.org/es/docs/Web/Guide/AJAX)
 * [Uniwebsidad: Introduccion a AJAX](https://uniwebsidad.com/libros/ajax)
+* [jQuery](https://jquery.com/)
+* [W3Schools: jQuery AJAX](https://www.w3schools.com/jquery/jquery_ref_ajax.asp)
