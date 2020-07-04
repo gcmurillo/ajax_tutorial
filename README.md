@@ -74,6 +74,11 @@ La funcion `muestraContenido()` comprueba que se ha recibido la respuesta del se
 
 Puede ver el ejemplo completo en el [repo](https://github.com/gcmurillo/ajax_tutorial/blob/master/code/index.html) 
 
+## jQuery y Ajax
+jQuery es una libreria de Javascript que permite manipular facilmente los documentos HTML y permite un uso mucho mas sencillo de Ajax.
+En este tutorial no profundizaremos en todos los aspectos de jQuery, sino solamente en el uso de Ajax.
+
+
 
 ## Referencias
 
